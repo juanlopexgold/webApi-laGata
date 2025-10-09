@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "AHXzqw+nN/u8ijPcovfWHcc/qE+69+1frmdZreHnEEw=",
+  "Source": "LaGata.Api",
+  "BasePath": "_content/LaGata.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "LaGata.Api\\wwwroot",
+      "Source": "LaGata.Api",
+      "ContentRoot": "C:\\Users\\DELL-PC\\Documents\\ProyectosNL\\integrador-lagata-API\\LaGata.Api\\wwwroot\\",
+      "BasePath": "_content/LaGata.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

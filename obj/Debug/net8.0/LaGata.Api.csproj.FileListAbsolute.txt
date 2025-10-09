@@ -175,3 +175,8 @@ C:\Users\DELL-PC\Documents\ProyectosNL\integrador-lagata-API\LaGata.Api\obj\Debu
 C:\Users\DELL-PC\Documents\ProyectosNL\integrador-lagata-API\LaGata.Api\obj\Debug\net8.0\LaGata.Api.genruntimeconfig.cache
 C:\Users\DELL-PC\Documents\ProyectosNL\integrador-lagata-API\LaGata.Api\obj\Debug\net8.0\ref\LaGata.Api.dll
 C:\Users\DELL-PC\Documents\ProyectosNL\integrador-lagata-API\LaGata.Api\obj\Debug\net8.0\LaGata.Api.sourcelink.json
+C:\Users\DELL-PC\Documents\ProyectosNL\integrador-lagata-API\LaGata.Api\bin\Debug\net8.0\publish\web.config
+C:\Users\DELL-PC\Documents\ProyectosNL\integrador-lagata-API\LaGata.Api\bin\Debug\net8.0\publish\appsettings.Development.json
+C:\Users\DELL-PC\Documents\ProyectosNL\integrador-lagata-API\LaGata.Api\bin\Debug\net8.0\publish\appsettings.json
+C:\Users\DELL-PC\Documents\ProyectosNL\integrador-lagata-API\LaGata.Api\bin\Debug\net8.0\publish\LaGata.Api.deps.json
+C:\Users\DELL-PC\Documents\ProyectosNL\integrador-lagata-API\LaGata.Api\bin\Debug\net8.0\publish\LaGata.Api.runtimeconfig.json

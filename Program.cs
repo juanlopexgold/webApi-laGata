@@ -19,6 +19,17 @@ builder.Services.AddScoped<IClienteService, ClienteService>();
 builder.Services.AddScoped<IProveedorService, ProveedorService>();
 builder.Services.AddScoped<IDetalleProductoService, DetalleProductoService>();
 
+// 🌐 Configurar CORS para permitir peticiones desde Flutter
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 // 📦 Servicios base
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -34,7 +45,7 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// 🌐 Middleware
+// 🧱 Middleware
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -42,6 +53,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// 🧩 Activar CORS
+app.UseCors("AllowAll");
 
 app.UseAuthorization(); // Si luego agregas JWT
 
