@@ -4203,11 +4203,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL-PC\\Documents\\ProyectosNL\\integrador-lagata-API\\LaGata.Api\\LaGata.Api.csproj",
+      "projectUniqueName": "C:\\Users\\DELL-PC\\Documents\\ProyectosNL\\integrador_lagata\\LaGata_Api\\LaGata.Api.csproj",
       "projectName": "LaGata.Api",
-      "projectPath": "C:\\Users\\DELL-PC\\Documents\\ProyectosNL\\integrador-lagata-API\\LaGata.Api\\LaGata.Api.csproj",
+      "projectPath": "C:\\Users\\DELL-PC\\Documents\\ProyectosNL\\integrador_lagata\\LaGata_Api\\LaGata.Api.csproj",
       "packagesPath": "C:\\Users\\DELL-PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL-PC\\Documents\\ProyectosNL\\integrador-lagata-API\\LaGata.Api\\obj\\",
+      "outputPath": "C:\\Users\\DELL-PC\\Documents\\ProyectosNL\\integrador_lagata\\LaGata_Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL-PC\\AppData\\Roaming\\NuGet\\NuGet.Config"

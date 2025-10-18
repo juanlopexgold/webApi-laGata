@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AHXzqw+nN/u8ijPcovfWHcc/qE+69+1frmdZreHnEEw=",
+  "Hash": "0nJYvTZUSXXsuH8rD6z0aH7YXgOj94DdqnvcuBMK7qE=",
   "Source": "LaGata.Api",
   "BasePath": "_content/LaGata.Api",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "LaGata.Api\\wwwroot",
       "Source": "LaGata.Api",
-      "ContentRoot": "C:\\Users\\DELL-PC\\Documents\\ProyectosNL\\integrador-lagata-API\\LaGata.Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\DELL-PC\\Documents\\ProyectosNL\\integrador_lagata\\LaGata_Api\\wwwroot\\",
       "BasePath": "_content/LaGata.Api",
       "Pattern": "**"
     }

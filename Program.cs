@@ -18,6 +18,7 @@ builder.Services.AddScoped<IProductoService, ProductoService>();
 builder.Services.AddScoped<IClienteService, ClienteService>();
 builder.Services.AddScoped<IProveedorService, ProveedorService>();
 builder.Services.AddScoped<IDetalleProductoService, DetalleProductoService>();
+builder.Services.AddScoped<ICompraService, CompraService>();
 
 // 🌐 Configurar CORS para permitir peticiones desde Flutter
 builder.Services.AddCors(options =>

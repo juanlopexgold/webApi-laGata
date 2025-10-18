@@ -15,6 +15,13 @@ namespace LaGata.Api.Data
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Compra> Compras { get; set; }
+        public DbSet<DetalleCompra> DetallesCompra { get; set; }
+        public DbSet<Proveedor> Proveedores { get; set; }
+        public DbSet<Producto> Productos { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Marca> Marcas { get; set; }
+        public DbSet<DetalleProducto> DetallesProducto { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -31,6 +38,13 @@ namespace LaGata.Api.Data
             modelBuilder.Entity<ClienteDto>().HasNoKey();
             modelBuilder.Entity<ProveedorDto>().HasNoKey();
             modelBuilder.Entity<DetalleProductoDto>().HasNoKey();
+            
+            // DTOs para Compras
+            modelBuilder.Entity<CompraResponse>().HasNoKey();
+            modelBuilder.Entity<DetalleCompraResponse>().HasNoKey();
+            modelBuilder.Entity<CompraListResponse>().HasNoKey();
+            modelBuilder.Entity<CompraResumenResponse>().HasNoKey();
+            modelBuilder.Entity<TopProductoCompradoResponse>().HasNoKey();
         }
     }
 }
