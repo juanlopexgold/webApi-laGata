@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LaGata.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97889cefdb29cb99494ffaea2b179c4e3e86cc53")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebb76a3864832b885213cea0c6205dcdb3f4da1d")]
 [assembly: System.Reflection.AssemblyProductAttribute("LaGata.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LaGata.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

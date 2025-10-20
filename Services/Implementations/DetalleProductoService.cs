@@ -14,17 +14,17 @@ namespace LaGata.Api.Services.Implementations
 
         public async Task<IEnumerable<DetalleProductoDto>> MostrarActivosAsync()
         {
-            return await _context.Set<DetalleProductoDto>().FromSqlRaw("EXEC sp_DetalleProducto_MostrarActivos").ToListAsync();
+            return _context.Set<DetalleProductoDto>().FromSqlRaw("EXEC sp_DetalleProducto_MostrarActivos").AsEnumerable().ToList();
         }
 
         public async Task<IEnumerable<DetalleProductoDto>> MostrarPorIdAsync(int detalleProductoId)
         {
-            return await _context.Set<DetalleProductoDto>().FromSqlRaw("EXEC sp_DetalleProducto_MostrarPorId @p0", detalleProductoId).ToListAsync();
+            return _context.Set<DetalleProductoDto>().FromSqlRaw("EXEC sp_DetalleProducto_MostrarPorId @p0", detalleProductoId).AsEnumerable().ToList();
         }
 
         public async Task<IEnumerable<DetalleProductoDto>> MostrarPorNombreAsync(string nombre)
         {
-            return await _context.Set<DetalleProductoDto>().FromSqlRaw("EXEC sp_DetalleProducto_MostrarPorNombre @p0", nombre).ToListAsync();
+            return _context.Set<DetalleProductoDto>().FromSqlRaw("EXEC sp_DetalleProducto_MostrarPorNombre @p0", nombre).AsEnumerable().ToList();
         }
 
         public async Task AjustarStockAsync(int detalleProductoId, int cantidad, int usuarioId)

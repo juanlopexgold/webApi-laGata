@@ -39,9 +39,8 @@ namespace LaGata.Api.DTOs
         [Range(0.01, double.MaxValue, ErrorMessage = "El precio unitario debe ser mayor a 0")]
         public decimal PrecioUnitario { get; set; }
         
-        [Required]
-        [Range(0.01, double.MaxValue, ErrorMessage = "El subtotal debe ser mayor a 0")]
-        public decimal Subtotal { get; set; }
+        [StringLength(50)]
+        public string CodigoBarra { get; set; }
     }
 
     // DTO para respuesta de compra

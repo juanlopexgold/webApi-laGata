@@ -17,9 +17,10 @@ namespace LaGata.Api.Services.Implementations
 
         public async Task<Usuario?> LoginAsync(string email, string passwordHash)
         {
-            var rows = await _context.Set<LoginUsuarioDto>()
+            var rows = _context.Set<LoginUsuarioDto>()
                 .FromSqlRaw("EXEC sp_LoginUsuario @p0, @p1", email, passwordHash)
-                .ToListAsync();
+                .AsEnumerable()
+                .ToList();
 
             var dto = rows.FirstOrDefault();
             if (dto == null) return null;
@@ -51,8 +52,8 @@ namespace LaGata.Api.Services.Implementations
 
         public async Task<IEnumerable<UsuarioRolDto>> VerRolUsuarioAsync(int usuarioId)
         {
-            return await _context.Set<UsuarioRolDto>().FromSqlRaw(
-                "EXEC sp_VerRolUsuario @p0", usuarioId).ToListAsync();
+            return _context.Set<UsuarioRolDto>().FromSqlRaw(
+                "EXEC sp_VerRolUsuario @p0", usuarioId).AsEnumerable().ToList();
         }
 
         public async Task AsignarRolUsuarioAsync(int usuarioId, int nuevoRolId, int usuarioAdminId)
@@ -78,38 +79,38 @@ namespace LaGata.Api.Services.Implementations
 
         public async Task<IEnumerable<UsuarioAdminListadoDto>> ListarUsuariosActivosAsync(int usuarioAdminId)
         {
-            return await _context.Set<UsuarioAdminListadoDto>().FromSqlRaw(
-                "EXEC sp_Usuarios_MostrarActivos @p0", usuarioAdminId).ToListAsync();
+            return _context.Set<UsuarioAdminListadoDto>().FromSqlRaw(
+                "EXEC sp_Usuarios_MostrarActivos @p0", usuarioAdminId).AsEnumerable().ToList();
         }
 
         public async Task<IEnumerable<UsuarioAdminListadoDto>> ListarUsuariosInactivosAsync(int usuarioAdminId)
         {
-            return await _context.Set<UsuarioAdminListadoDto>().FromSqlRaw(
-                "EXEC sp_Usuarios_MostrarInactivos @p0", usuarioAdminId).ToListAsync();
+            return _context.Set<UsuarioAdminListadoDto>().FromSqlRaw(
+                "EXEC sp_Usuarios_MostrarInactivos @p0", usuarioAdminId).AsEnumerable().ToList();
         }
 
         public async Task<IEnumerable<UsuarioResumenDto>> ListarUsuariosTodosAsync()
         {
-            return await _context.Set<UsuarioResumenDto>().FromSqlRaw(
-                "EXEC sp_Usuarios_MostrarTodos").ToListAsync();
+            return _context.Set<UsuarioResumenDto>().FromSqlRaw(
+                "EXEC sp_Usuarios_MostrarTodos").AsEnumerable().ToList();
         }
 
         public async Task<IEnumerable<UsuarioResumenDto>> ListarUsuariosActivosInfoAsync()
         {
-            return await _context.Set<UsuarioResumenDto>().FromSqlRaw(
-                "EXEC sp_Usuarios_MostrarActivosInfo").ToListAsync();
+            return _context.Set<UsuarioResumenDto>().FromSqlRaw(
+                "EXEC sp_Usuarios_MostrarActivosInfo").AsEnumerable().ToList();
         }
 
         public async Task<IEnumerable<UsuarioResumenDto>> ListarUsuariosInactivosInfoAsync()
         {
-            return await _context.Set<UsuarioResumenDto>().FromSqlRaw(
-                "EXEC sp_Usuarios_MostrarInactivosInfo").ToListAsync();
+            return _context.Set<UsuarioResumenDto>().FromSqlRaw(
+                "EXEC sp_Usuarios_MostrarInactivosInfo").AsEnumerable().ToList();
         }
 
         public async Task<IEnumerable<UsuarioResumenDto>> VerUsuarioPorIdAsync(int usuarioId)
         {
-            return await _context.Set<UsuarioResumenDto>().FromSqlRaw(
-                "EXEC sp_Usuario_MostrarPorId @p0", usuarioId).ToListAsync();
+            return _context.Set<UsuarioResumenDto>().FromSqlRaw(
+                "EXEC sp_Usuario_MostrarPorId @p0", usuarioId).AsEnumerable().ToList();
         }
     }
 }
